@@ -132,4 +132,10 @@ view: superstore {
     type: count
     drill_fields: [customer_name, product_name]
   }
+
+  measure: avg {
+    type: average
+    sql: ${TABLE}.profit ;;
+    }
+
 }
