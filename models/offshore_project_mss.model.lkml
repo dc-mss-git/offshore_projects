@@ -10,4 +10,4 @@ datagroup: offshore_project_mss_default_datagroup {
 
 persist_with: offshore_project_mss_default_datagroup
 
-explore: superstore{}
+explore: weather_history_report{}
