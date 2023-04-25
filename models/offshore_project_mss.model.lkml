@@ -10,4 +10,5 @@ datagroup: offshore_project_mss_default_datagroup {
 
 persist_with: offshore_project_mss_default_datagroup
 
-explore: weather_history_report{}
+explore: finance_expenses{}
+explore: finance_sales {}
