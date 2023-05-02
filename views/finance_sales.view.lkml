@@ -15,6 +15,7 @@ view: finance_sales {
   dimension: cogs {
     type: number
     sql: ${TABLE}.COGS ;;
+    value_format: "0.00"
   }
 
   dimension: customer_segment {
@@ -60,16 +61,19 @@ view: finance_sales {
   dimension: forecasted_sales {
     type: number
     sql: ${TABLE}.Forecasted_Sales ;;
+    value_format: "0.00"
   }
 
   dimension: gross_profit {
     type: number
     sql: ${TABLE}.Gross_Profit ;;
+    value_format: "0.00"
   }
 
   dimension: gross_sales {
     type: number
     sql: ${TABLE}.Gross_Sales ;;
+    value_format: "0.00"
   }
 
   dimension: half_yearly {
@@ -80,6 +84,7 @@ view: finance_sales {
   dimension: net_sales {
     type: number
     sql: ${TABLE}.Net_Sales ;;
+    value_format: "0.00"
   }
 
   dimension: product {
@@ -100,15 +105,22 @@ view: finance_sales {
   dimension: stock_budget {
     type: number
     sql: ${TABLE}.Stock_Budget ;;
+    value_format: "0.00"
   }
 
-  dimension: vtb____ {
+  dimension: VTB {
     type: number
     sql: ${TABLE}.VTB____ ;;
+    value_format: "0.00"
   }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: VTB_percent {
+    type: number
+    sql: 100*(sum(${VTB})/sum(${stock_budget}));;
+    value_format: "0.00"
   }
 }

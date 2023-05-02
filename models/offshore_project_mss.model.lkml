@@ -10,5 +10,8 @@ datagroup: offshore_project_mss_default_datagroup {
 
 persist_with: offshore_project_mss_default_datagroup
 
-explore: finance_expenses{}
+explore: weather_history_report {}
+explore: supply_chain_freight_rates{}
+explore: supply_chain_sales_prices {}
+explore: finance_expenses {}
 explore: finance_sales {}
