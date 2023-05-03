@@ -83,7 +83,7 @@ view: supply_chain_sales_prices {
   }
 
   measure: count {
-    type: count
-    drill_fields: []
+    type: count_distinct
+    drill_fields: [product_id,order_id,customer,plant_code]
   }
 }
