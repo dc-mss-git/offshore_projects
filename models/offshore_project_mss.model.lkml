@@ -11,7 +11,7 @@ datagroup: offshore_project_mss_default_datagroup {
 persist_with: offshore_project_mss_default_datagroup
 
 
-#explore: superstore{}
+explore: superstore{}
 
 explore: energy_consumption_monthly {}
 explore: energy_consumption_weekly {}
