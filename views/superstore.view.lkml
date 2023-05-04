@@ -145,4 +145,15 @@ measure: sum{
   type:  sum
   sql:  ${TABLE}.profit ;;
  }
+  dimension: odate {
+    type: date
+    sql: ${order_date};;
+
+  }
+
+  measure: tsales {
+    type: sum
+    sql: ${sales} ;;
+  }
+
 }
