@@ -134,4 +134,19 @@ view: superstore {
   }
 
 
+
+
+  measure: avg {
+    type: average
+    sql: ${TABLE}.avg ;;
+    }
+measure: max {
+  type:  max
+  sql: ${TABLE}.profit ;;
+}
+measure: sum{
+  type:  sum
+  sql:  ${TABLE}.profit ;;
+ }
+
 }

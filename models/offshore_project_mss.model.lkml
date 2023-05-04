@@ -10,6 +10,7 @@ datagroup: offshore_project_mss_default_datagroup {
 
 persist_with: offshore_project_mss_default_datagroup
 
+
 explore: superstore{}
 explore: agriculture_seasonal_data1 {}
 explore: insurance {}
@@ -21,7 +22,7 @@ explore: tech_layoffs {}
 explore: indian_cities_location {}
 explore: us_zips {}
 explore: us_cities_data {}
-explore: weather_history_report {}
+#explore: weather_history_report {}
 explore: customers_credit_card_dataset {}
 explore: edm_kwh_consumption {}
 explore:edm_production_data_monthly{}
@@ -34,3 +35,9 @@ explore:col_eu_cities_2021{}
 explore:col_eu_cities_2022{}
 explore:col_eu_2021{}
 explore:col_eu_2022 {}
+
+#explore: weather_history_report {}
+explore: supply_chain_freight_rates{}
+explore: supply_chain_sales_prices {}
+explore: finance_expenses {}
+explore: finance_sales {}

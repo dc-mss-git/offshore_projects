@@ -91,8 +91,24 @@ view: weather_history_report {
     sql: ${TABLE}.Wind_Speed__km_h_ ;;
   }
 
+
+
   measure: count {
     type: count
     drill_fields: []
+    }
+
+  measure: precipitation {
+    type: count
+    drill_fields: [precip_type]
+  }
+  measure: temperature {
+    type: sum
+    sql: ${TABLE}.Temperature__C_ ;;
+  }
+  measure: apparent_temp {
+    type: sum
+    sql: ${TABLE}.Apparent_Temperature__C_ ;;
+
   }
 }
