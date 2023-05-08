@@ -26,9 +26,9 @@ explore: superstore{}
 #explore: hotel_dataset {}
 #explore: hr_dataste {}
 
-#explore: agriculture_seasonal_data1 {}
-#explore: insurance {}
-#explore: energy_consumption_monthly {}
+explore: agriculture_seasonal_data1 {}
+#explore: insurance {
+explore: energy_consumption_monthly {}
 #explore: manufacturing_operations {}
 #explore: supply_chain_logistics {}
 #explore: energy_consumption_weekly {}
@@ -37,18 +37,18 @@ explore: superstore{}
 #explore: us_zips {}
 #explore: us_cities_data {}
 #explore: weather_history_report {}
-#explore: customers_credit_card_dataset {}
-#explore: edm_kwh_consumption {}
+explore: customers_credit_card_dataset {}
+explore: edm_kwh_consumption {}
 #explore:edm_production_data_monthly{}
-#explore: meteorite_dataset {}
-#explore: myntra_dataset {}
-#explore: global_dataset {}
-#explore: make_my_trip_dataset{}
-#explore:col_romania{}
-#explore:col_eu_cities_2021{}
-#explore:col_eu_cities_2022{}
-#explore:col_eu_2021{}
-#explore:col_eu_2022 {}
+explore: meteorite_dataset {}
+explore: myntra_dataset {}
+explore: global_dataset {}
+explore: make_my_trip_dataset{}
+explore:col_romania{}
+explore:col_eu_cities_2021{}
+explore:col_eu_cities_2022{}
+explore:col_eu_2021{}
+explore:col_eu_2022 {}
 
 explore: weather_history_report {}
 explore: supply_chain_freight_rates{}
