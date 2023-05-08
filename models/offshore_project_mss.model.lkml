@@ -39,7 +39,7 @@ explore: energy_consumption_monthly {}
 #explore: weather_history_report {}
 explore: customers_credit_card_dataset {}
 explore: edm_kwh_consumption {}
-#explore:edm_production_data_monthly{}
+explore:edm_production_data_monthly{}
 explore: meteorite_dataset {}
 explore: myntra_dataset {}
 explore: global_dataset {}
