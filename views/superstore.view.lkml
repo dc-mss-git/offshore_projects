@@ -133,6 +133,9 @@ view: superstore {
     drill_fields: [customer_name, product_name]
   }
 
+
+
+
   measure: avg {
     type: average
     sql: ${TABLE}.avg ;;
@@ -145,4 +148,18 @@ measure: sum{
   type:  sum
   sql:  ${TABLE}.profit ;;
  }
+
+  dimension: odate {
+    type: date
+    sql: ${order_date};;
+
+  }
+
+  measure: tsales {
+    type: sum
+    sql: ${sales} ;;
+  }
+
+
+
 }
