@@ -68,7 +68,6 @@ explore:  main{
     sql_on: ${date.dim_date_post_pk}=${main.dim_date_post_pk};;
     relationship: many_to_one
   }
-
 }
 explore:  cpt_codes{}
 explore:  date{}
