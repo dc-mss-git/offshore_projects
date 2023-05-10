@@ -18,12 +18,12 @@ view: cpt_codes {
   }
 
   dimension: dim_cptcode_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimCPTCodePK ;;
   }
 
   measure: count {
-    type: count
-    drill_fields: []
+    type: count_distinct
+    sql: ${cpt_code} ;;
   }
 }

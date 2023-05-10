@@ -5,7 +5,7 @@ view: patient {
 
   dimension: dim_patient_pk {
     primary_key: yes
-    type: number
+    type: string
     sql: ${TABLE}.dimPatientPK ;;
   }
 
@@ -40,7 +40,7 @@ view: patient {
   }
 
   dimension: patient_number {
-    type: number
+    type: string
     sql: ${TABLE}.PatientNumber ;;
   }
 

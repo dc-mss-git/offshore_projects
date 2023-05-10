@@ -18,7 +18,7 @@ view: main {
   }
 
   dimension: dim_cptcode_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimCPTCodePK ;;
   }
 
@@ -33,37 +33,37 @@ view: main {
   }
 
   dimension: dim_diagnosis_code_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimDiagnosisCodePK ;;
   }
 
   dimension: dim_location_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimLocationPK ;;
   }
 
   dimension: dim_patient_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimPatientPK ;;
   }
 
   dimension: dim_payer_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimPayerPK ;;
   }
 
   dimension: dim_physician_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimPhysicianPK ;;
   }
 
   dimension: dim_transaction_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimTransactionPK ;;
   }
 
   dimension: fact_table_pk {
-    type: number
+    type: string
     sql: ${TABLE}.FactTablePK ;;
   }
 
@@ -72,8 +72,14 @@ view: main {
     sql: ${TABLE}.GrossCharge ;;
   }
 
+  measure: total_charge{
+    type: sum
+    sql: ${TABLE}.GrossCharge ;;
+    value_format: "$0.00"
+  }
+
   dimension: patient_number {
-    type: number
+    type: string
     sql: ${TABLE}.PatientNumber ;;
   }
 
@@ -83,7 +89,19 @@ view: main {
   }
 
   measure: count {
-    type: count
-    drill_fields: []
+    type: count_distinct
+    sql: ${fact_table_pk} ;;
+  }
+
+  measure: total_adjustment {
+    type: sum
+    sql: ${TABLE}.Adjustment ;;
+    value_format: "$0.00"
+  }
+
+  measure: accounts_receivable {
+    type: sum
+    sql: ${TABLE}.AR ;;
+    value_format: "$0.00"
   }
 }

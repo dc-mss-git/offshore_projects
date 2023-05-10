@@ -89,7 +89,7 @@ explore:  main{
   }
   join: payer{
     type: left_outer
-    sql_on: ${main.dim_payer_pk}=${main.dim_payer_pk} ;;
+    sql_on: ${payer.dim_payer_pk}=${main.dim_payer_pk} ;;
     relationship: many_to_one
   }
   join: providers{

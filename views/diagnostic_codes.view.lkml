@@ -18,12 +18,12 @@ view: diagnostic_codes {
   }
 
   dimension: dim_diagnosis_code_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimDiagnosisCodePK ;;
   }
 
   measure: count {
-    type: count
-    drill_fields: []
+    type: count_distinct
+    sql: ${diagnosis_code} ;;
   }
 }

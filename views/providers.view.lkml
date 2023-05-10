@@ -3,7 +3,7 @@ view: providers {
     ;;
 
   dimension: dim_physician_pk {
-    type: number
+    type: string
     sql: ${TABLE}.dimPhysicianPK ;;
   }
 
@@ -18,7 +18,7 @@ view: providers {
   }
 
   dimension: provider_npi {
-    type: number
+    type: string
     sql: ${TABLE}.ProviderNpi ;;
   }
 
@@ -28,7 +28,7 @@ view: providers {
   }
 
   measure: count {
-    type: count
-    drill_fields: [provider_name]
+    type: count_distinct
+    sql: ${dim_physician_pk};;
   }
 }

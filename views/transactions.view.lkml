@@ -5,7 +5,7 @@ view: transactions {
 
   dimension: dim_transaction_pk {
     primary_key: yes
-    type: number
+    type: string
     sql: ${TABLE}.dimTransactionPK ;;
   }
 
@@ -25,7 +25,7 @@ view: transactions {
   }
 
   measure: count {
-    type: count
-    drill_fields: [dim_transaction_pk]
+    type: count_distinct
+    sql: ${dim_transaction_pk} ;;
   }
 }
