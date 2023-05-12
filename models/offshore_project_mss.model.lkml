@@ -10,44 +10,41 @@ datagroup: offshore_project_mss_default_datagroup {
 
 persist_with: offshore_project_mss_default_datagroup
 
-explore: superstore{}
+explore: hcp_index{
+join:  ccp_index{
+  type: left_outer
+  sql_on: ${hcp_index.month} = ${ccp_index.month}
+          AND ${hcp_index.year} = ${ccp_index.year}
+          AND ${hcp_index.date} = ${ccp_index.date}
+          AND ${hcp_index.country} = ${ccp_index.country};;
+  relationship: many_to_one
+}
+join:  ecp_index{
+  type: left_outer
+  sql_on: ${hcp_index.month} = ${ecp_index.month}
+          AND ${hcp_index.year} = ${ecp_index.year}
+          AND ${hcp_index.date} = ${ecp_index.date}
+          AND ${hcp_index.country} = ${ecp_index.country};;
+  relationship: many_to_one
+}
+join:  fcp_index{
+  type: left_outer
+  sql_on: ${hcp_index.month} = ${fcp_index.month}
+          AND ${hcp_index.year} = ${fcp_index.year}
+          AND ${hcp_index.date} = ${fcp_index.date}
+          AND ${hcp_index.country} = ${fcp_index.country};;
+  relationship: many_to_one
+}
+join:  producer_index{
+  type: left_outer
+  sql_on: ${hcp_index.month} = ${producer_index.month}
+          AND ${hcp_index.year} = ${producer_index.year}
+          AND ${hcp_index.country} = ${producer_index.country};;
+  relationship: many_to_one
+}
+}
 
-#explore: energy_consumption_monthly {}
-#explore: energy_consumption_weekly {}
-#explore: tech_layoffs {}
-#explore: insurance {}
-#explore: supply_chain_logistics {}
-#explore: manufacturing_operations {}
-#explore: amazn_dataset {}
-#explore: crypto_dataset {}
-#explore: road_accident_dataset {}
-#explore: netflix_dataset {}
-#explore: hotel_dataset {}
-#explore: hr_dataste {}
 
-explore: agriculture_seasonal_data1 {}
-#explore: insurance {
-explore: energy_consumption_monthly {}
-#explore: manufacturing_operations {}
-#explore: supply_chain_logistics {}
-#explore: energy_consumption_weekly {}
-#explore: tech_layoffs {}
-#explore: indian_cities_location {}
-#explore: us_zips {}
-#explore: us_cities_data {}
-#explore: weather_history_report {}
-explore: customers_credit_card_dataset {}
-explore: edm_kwh_consumption {}
-explore:edm_production_data_monthly{}
-explore: meteorite_dataset {}
-explore: myntra_dataset {}
-explore: global_dataset {}
-explore: make_my_trip_dataset{}
-explore:col_romania{}
-explore:col_eu_cities_2021{}
-explore:col_eu_cities_2022{}
-explore:col_eu_2021{}
-explore:col_eu_2022 {}
 
 explore: weather_history_report {}
 
@@ -63,6 +60,7 @@ explore: supply_chain_sales_prices {
     relationship: many_to_one
   }
 }
+
 explore: finance_expenses {}
 explore: finance_sales {}
 
