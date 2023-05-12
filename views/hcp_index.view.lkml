@@ -14,7 +14,7 @@ view: hcp_index {
   }
 
   measure: hcpi {
-    type: number
+    type: sum
     sql: ${TABLE}.HCPI ;;
   }
 

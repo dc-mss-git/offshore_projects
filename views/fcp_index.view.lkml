@@ -14,7 +14,7 @@ view: fcp_index {
   }
 
   measure: fcpi {
-    type: number
+    type: sum
     sql: ${TABLE}.FCPI ;;
   }
 

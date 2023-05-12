@@ -3,7 +3,7 @@ view: ccp_index {
     ;;
 
   measure: ccpi {
-    type: number
+    type: sum
     sql: ${TABLE}.CCPI ;;
   }
 

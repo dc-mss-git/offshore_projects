@@ -14,7 +14,7 @@ view: ecp_index {
   }
 
   measure: ecpi {
-    type: number
+    type: sum
     sql: ${TABLE}.ECPI ;;
   }
 

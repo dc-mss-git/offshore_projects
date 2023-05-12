@@ -9,7 +9,7 @@ view: fcp_inflation {
   }
 
   measure: value {
-    type: number
+    type: sum
     sql: ${TABLE}.Value ;;
   }
 

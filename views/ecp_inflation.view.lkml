@@ -9,7 +9,7 @@ view: ecp_inflation {
   }
 
   measure: percent {
-    type: number
+    type: sum
     sql: ${TABLE}.Value ;;
   }
 

@@ -14,7 +14,7 @@ view: producer_index {
   }
 
   measure: ppi {
-    type: number
+    type: sum
     sql: ${TABLE}.PPI ;;
   }
 
