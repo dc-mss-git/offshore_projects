@@ -158,7 +158,9 @@ measure: sum{
   measure: tsales {
     type: sum
     sql: ${sales} ;;
-  }
+
+}
+
 
 
 

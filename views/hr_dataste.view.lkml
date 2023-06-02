@@ -177,4 +177,15 @@ view: hr_dataste {
     type: count
     drill_fields: []
   }
+
+
+  dimension: swapna {
+    sql: ${attrition} ;;
+    html: <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"  height="170" width="255">  ;;
+
+ }
+
+
+
+
 }

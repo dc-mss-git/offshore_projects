@@ -55,3 +55,4 @@ explore: supply_chain_freight_rates{}
 explore: supply_chain_sales_prices {}
 explore: finance_expenses {}
 explore: finance_sales {}
+explore: earthquake_dataset {}
