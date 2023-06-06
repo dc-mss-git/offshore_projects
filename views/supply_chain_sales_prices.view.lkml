@@ -82,8 +82,29 @@ view: supply_chain_sales_prices {
     sql: ${TABLE}.Weight ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
+  measure: count_products {
+    type: count_distinct
+    sql: ${TABLE}.Product_ID ;;
+  }
+
+  measure: count_customers {
+    type: count_distinct
+    sql: ${TABLE}.Customer ;;
+  }
+
+  measure: count_orders {
+    type: count_distinct
+    sql: ${TABLE}.Order_ID ;;
+  }
+
+  measure: count_plants {
+    type: count_distinct
+    sql: ${TABLE}.Plant_Code ;;
+  }
+
+  measure: order_weight {
+    type: number
+    value_format: "#"
+    sql: sum(${weight}*${unit_quantity}) ;;
   }
 }
