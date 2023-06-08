@@ -117,7 +117,22 @@ view: road_accident_dataset {
     sql: ${TABLE}.Weather_Conditions ;;
   }
 
-  measure: count {
+  dimension: abhi {
+    type: string
+    sql: ${TABLE}.speed_limit ;;
+    html: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQavXQ9TKhkoPcK326RJBUh9F_FIZUTqPhGdcG5xym7rYNdln9rS4XDsub8ELcr0ctslR8&usqp=CAU" /> ;;
+  }
+  dimension: abhishek {
+    type: string
+    sql: ${TABLE}.speed_limit ;;
+    html: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSiw9e1h4jnBvgqBQPQc0d1EvsgSsmxsDVJQ&usqp=CAU=" /> ;;
+  }
+  dimension: abhishek012 {
+    type: string
+    sql: ${TABLE}.speed_limit ;;
+    html: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXeB0WEJlxKa5ZekyYkD4NMkz8DGIOm9mueg&usqp=CAU" /> ;;
+  }
+     measure: count {
     type: count
     drill_fields: []
   }
