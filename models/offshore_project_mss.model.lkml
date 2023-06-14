@@ -17,12 +17,12 @@ explore: superstore{}
 #explore: tech_layoffs {}
 #explore: insurance {}
 #explore: supply_chain_logistics {}
-#explore: manufacturing_operations {}
-#explore: amazn_dataset {}
-#explore: crypto_dataset {}
+explore: manufacturing_operations {}
+explore: amazn_dataset {}
+explore: crypto_dataset {}
 explore: road_accident_dataset {}
 explore: netflix_dataset {}
-#explore: hotel_dataset {}
+explore: hotel_dataset {}
 explore: hr_dataste {}
 
 explore: agriculture_seasonal_data1 {}
