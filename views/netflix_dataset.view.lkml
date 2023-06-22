@@ -178,4 +178,5 @@ view: netflix_dataset {
     type: count
     drill_fields: []
   }
+
 }
