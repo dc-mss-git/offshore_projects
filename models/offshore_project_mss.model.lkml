@@ -12,7 +12,7 @@ persist_with: offshore_project_mss_default_datagroup
 
 explore: superstore{}
 
-#explore: energy_consumption_monthly {}
+explore: energy_consumption_monthly {}
 #explore: energy_consumption_weekly {}
 #explore: tech_layoffs {}
 #explore: insurance {}
@@ -27,7 +27,7 @@ explore: hr_dataste {}
 
 explore: agriculture_seasonal_data1 {}
 #explore: insurance {
-explore: energy_consumption_monthly {}
+# explore: energy_consumption_monthly {}
 #explore: manufacturing_operations {}
 #explore: supply_chain_logistics {}
 #explore: energy_consumption_weekly {}
@@ -117,3 +117,4 @@ explore:  patient{}
 explore:  payer{}
 explore:  providers{}
 explore:  transactions{}
+explore: health_data {}
